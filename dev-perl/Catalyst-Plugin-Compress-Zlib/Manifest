@@ -1,0 +1,8 @@
+DIST Catalyst-Plugin-Compress-Zlib-0.02.tar.gz 2275 RMD160 8f089ca5e061d013bb5152c40f5d109b53b1aeef SHA1 1d917993bffa24355bbbcd052883fe4fef0fd3fa SHA256 0df9ad71afc8001408469015a7814816522f7975502bea819712120543b947ba
+EBUILD Catalyst-Plugin-Compress-Zlib-0.02-r1.ebuild 553 RMD160 5bf58a24a8808344f450a55f7539cbb92f68ca76 SHA1 58d1e61fcd1c00f66da43ab648251d70c6ee1adb SHA256 67a3066cf96d4e8958c72381bac6f2b99663e63079d8f38179170e824397054e
+MD5 bb71bc02135d2fa626321dc430d138da Catalyst-Plugin-Compress-Zlib-0.02-r1.ebuild 553
+RMD160 5bf58a24a8808344f450a55f7539cbb92f68ca76 Catalyst-Plugin-Compress-Zlib-0.02-r1.ebuild 553
+SHA256 67a3066cf96d4e8958c72381bac6f2b99663e63079d8f38179170e824397054e Catalyst-Plugin-Compress-Zlib-0.02-r1.ebuild 553
+MD5 253795b8b09012a50f70336d7b9c030a files/digest-Catalyst-Plugin-Compress-Zlib-0.02-r1 298
+RMD160 fd04869bef2f48213e348c90507afe2931efbd14 files/digest-Catalyst-Plugin-Compress-Zlib-0.02-r1 298
+SHA256 1b5874d7905c79001cec3dcc37d21e3e70170b71ca4c982166138e013e7c96dd files/digest-Catalyst-Plugin-Compress-Zlib-0.02-r1 298

@@ -1,0 +1,12 @@
+--- lib/Net/Whois/Raw.pm   2004-09-23 07:47:26.000000000 +0200
++++ lib/Net/Whois/Raw.pm   2004-10-11 10:18:22.289327125 +0200
+@@ -181,6 +181,9 @@
+     if ($srv eq 'WHOIS.MELBOURNEIT.COM' && $israce) {
+        $whoisquery .= ' race';
+     }
++    if ($srv =~ /^whois\.denic\.de$/i) {
++        $whoisquery = '-T dn ' . $whoisquery;
++    }
+     #warn "$srv: $whoisquery ($OMIT_MSG, $CHECK_FAIL, $CACHE_DIR, $CACHE_TIME, $USE_CNAMES, $TIMEOUT)\n";
+     print $sock "$whoisquery\r\n";
+     my @lines = <$sock>;
