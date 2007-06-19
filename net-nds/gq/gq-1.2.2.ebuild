@@ -6,7 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GTK-based LDAP client"
 SRC_URI="mirror://sourceforge/gqclient/${P}.tar.gz"
 HOMEPAGE="http://www.biot.com/gq/"
-IUSE="jpeg ssl"
+IUSE="ssl"
 #IUSE="kerberos jpeg nls ssl"
 
 SLOT="0"
@@ -15,9 +15,9 @@ KEYWORDS="x86 ~sparc"
 
 DEPEND="x11-libs/gtk+*
 	>=net-nds/openldap-2
-	jpeg? ( media-libs/gdk-pixbuf )
 	ssl? ( dev-libs/openssl )"
 
+	#jpeg? ( media-libs/gdk-pixbuf )
 	#kerberos? ( || ( app-crypt/heimdal app-crypt/mit-krb5 ) )
 
 src_compile() {
