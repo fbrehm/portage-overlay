@@ -5,9 +5,9 @@
 inherit perl-module
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Manages IP addresses and subnets"
-SRC_URI="http://cpan.pair.com/modules/by-module/NetAddr/${P}.tar.gz"
-HOMEPAGE="http://cpan.pair.com/modules/by-module/NetAddr/${P}.readme"
+DESCRIPTION="Simplified source filtering"
+SRC_URI="http://cpan.pair.com/modules/by-module/Filter/${P}.tar.gz"
+HOMEPAGE="http://cpan.pair.com/modules/by-module/Filter/${PN}-0.80.readme"
 
 SLOT="0"
 LICENSE="Artistic"
