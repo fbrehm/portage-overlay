@@ -1,8 +1,8 @@
-DIST POE-Component-Client-Keepalive-0.0801.tar.gz 24275 RMD160 861b437fd6c8b57e9572c3c1581a21303e510101 SHA1 8cffdb432adf8ecbf67ebc25b18437d406d2ffc5 SHA256 cd7210d5b2b3c523d49b449a3fa85bd34978f677c6ea401aa49929aa46f46daa
-EBUILD POE-Component-Client-Keepalive-0.08.01.ebuild 548 RMD160 4c1686bf980ba908cf7fcfa744d35a68ea48ad38 SHA1 960dcabeba7e2d9fa0b525195a2019362183ea09 SHA256 f795b6cc70cd4567be9340bba8fbe3473f370328dc0ebb7e0c648bac674288c8
-MD5 581a9dfcd00aa22ad53265c61b88a581 POE-Component-Client-Keepalive-0.08.01.ebuild 548
-RMD160 4c1686bf980ba908cf7fcfa744d35a68ea48ad38 POE-Component-Client-Keepalive-0.08.01.ebuild 548
-SHA256 f795b6cc70cd4567be9340bba8fbe3473f370328dc0ebb7e0c648bac674288c8 POE-Component-Client-Keepalive-0.08.01.ebuild 548
-MD5 fc986648c0ace14b4f9132fa30731340 files/digest-POE-Component-Client-Keepalive-0.08.01 310
-RMD160 86aa67b0930a8a3451515c2c0cf91c12de03a631 files/digest-POE-Component-Client-Keepalive-0.08.01 310
-SHA256 728f911aa553daf52604aef6d464171b13b135049bdb4680bf89529726cb6e99 files/digest-POE-Component-Client-Keepalive-0.08.01 310
+DIST POE-Component-Client-Keepalive-0.1000.tar.gz 23994 RMD160 0a98c5650c4041c0e1891e0800a054269beffa69 SHA1 948fc8758f8a07e25489c023a12bb57269aee913 SHA256 b056d5439ec01f11c072ad86c27b78096f3798339f2e1e41828c1b7957846ad1
+EBUILD POE-Component-Client-Keepalive-0.1000.ebuild 479 RMD160 c14a3b31b46c4b6f154b47167c378f9c9ec7042e SHA1 113f051b530c08458b7e7f80ad0964aa4563da05 SHA256 0e81da0c59a7ad09c785cc6d1d184299f9e1afb5862b58149071d1cd2ed0b6a5
+MD5 a59a177a20fdc6b79dbcd979f9c55584 POE-Component-Client-Keepalive-0.1000.ebuild 479
+RMD160 c14a3b31b46c4b6f154b47167c378f9c9ec7042e POE-Component-Client-Keepalive-0.1000.ebuild 479
+SHA256 0e81da0c59a7ad09c785cc6d1d184299f9e1afb5862b58149071d1cd2ed0b6a5 POE-Component-Client-Keepalive-0.1000.ebuild 479
+MD5 1f2608ea2fbb28f25bf04ce98b3a188d files/digest-POE-Component-Client-Keepalive-0.1000 310
+RMD160 ae39d22f47d32fc64e799f647262574991657e33 files/digest-POE-Component-Client-Keepalive-0.1000 310
+SHA256 7e84ff78b34e26dae30c4a5ce1d9dd1846d6fbee91ad7bcecd4ccdf40d3b2b97 files/digest-POE-Component-Client-Keepalive-0.1000 310
