@@ -24,7 +24,7 @@ RDEPEND="app-admin/webapp-config
 		media-libs/ming
 		media-libs/pdflib
 		dev-db/mysql
-		net-www/apache
+		www-servers/apache
 		dev-lang/php"
 
 		# media-gfx/graphicsmagick
