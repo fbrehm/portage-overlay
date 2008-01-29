@@ -11,6 +11,6 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="nomirror"
-DEPEND=">=dev-perl/Readonly-1.0"
+DEPEND=">=dev-perl/Readonly-1.02"
 
 
