@@ -13,13 +13,15 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 
+RESTRICT="nomirror"
+
 DEPEND="${DEPEND}
     >=dev-perl/NetAddr-IP-3.07
     dev-perl/Net-DNS"
 
 src_unpack() {
-  unpack ${A}
-  cd ${WORKDIR}/${P}
-  rm -f pm_to_blib
+	unpack ${A}
+	cd ${WORKDIR}/${P}
+	rm -f pm_to_blib
 }
 

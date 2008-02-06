@@ -4,7 +4,7 @@
 
 inherit perl-module eutils
 
-S="${WORKDIR}/${P}"
+#S="${WORKDIR}/${P}"
 DESCRIPTION="Provides simplify a sockets connection to and an IMAP conversation with an IMAP server"
 SRC_URI="http://cpan.pair.com/modules/by-module/${P%%-*}/${P}.tar.gz"
 HOMEPAGE="http://cpan.pair.com/modules/by-module/${P%%-*}/${P}.readme"
@@ -21,6 +21,6 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd $S
-	epatch ${FILESDIR}/dont_ask.patch
+	epatch ${FILESDIR}/dont_ask-${PV}.patch
 }
 
