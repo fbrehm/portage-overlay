@@ -6,8 +6,8 @@ inherit perl-module
 
 S=${WORKDIR}/MysqlTool-${PV}
 DESCRIPTION="Web interface for managing one or more mysql server installations"
-SRC_URI="http://www.dajoba.com/projects/mysqltool/MysqlTool-${PV}.tar.gz"
-HOMEPAGE="http://www.dajoba.com/projects/mysqltool/"
+SRC_URI="http://www.brouhaha.com/~eric/software/mysqltool/download/MysqlTool-${PV}.tar.gz"
+HOMEPAGE="http://www.brouhaha.com/~eric/software/mysqltool/"
 IUSE="apache2"
 
 LICENSE="GPL-2"
