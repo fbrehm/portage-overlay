@@ -9,7 +9,7 @@ DESCRIPTION="Cross-platform interface to ICMP 'ping' utilities"
 SRC_URI="http://www.cpan.org/modules/by-module/Net/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/src/CHORNY/Net-Ping-External-0.12/README"
 
-RESTRICT=mirror
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="Artistic"
