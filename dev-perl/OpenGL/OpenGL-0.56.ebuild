@@ -14,5 +14,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/${PN}/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
-
+RESTRICT="nomirror"
 

@@ -4,7 +4,7 @@
 inherit perl-module
 
 DESCRIPTION="SNMP support for Perl 5"
-SRC_URI="http://www.switch.ch/misc/leinen/snmp/perl/dist/old/${P}.tar.gz"
+SRC_URI="http://www.switch.ch/misc/leinen/snmp/perl/dist/${P}.tar.gz"
 HOMEPAGE="http://www.switch.ch/misc/leinen/snmp/perl/"
 
 SLOT="0"

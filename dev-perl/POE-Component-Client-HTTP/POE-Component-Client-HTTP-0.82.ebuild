@@ -12,6 +12,7 @@ HOMEPAGE="http://cpan.perl.org/modules/by-module/POE/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+RESTRICT="nomirror"
 
 DEPEND=">=dev-perl/POE-0.32.02
 >=dev-perl/POE-Component-Client-Keepalive-0.07.04
