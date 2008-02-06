@@ -10,6 +10,7 @@ LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
+RESTRICT="nomirror"
 
 DEPEND="virtual/libc"
 RDEPEND="virtual/libc"

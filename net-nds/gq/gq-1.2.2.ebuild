@@ -12,6 +12,7 @@ IUSE="ssl"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
+RESTRICT="nomirror"
 
 DEPEND="x11-libs/gtk+*
 	>=net-nds/openldap-2
