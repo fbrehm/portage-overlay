@@ -13,4 +13,4 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 
-
+RESTRICT="nomirror"
