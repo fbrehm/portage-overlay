@@ -62,6 +62,7 @@ EOF
 	doins ${S}/config/ndomod.cfg
 
 	newinitd ${FILESDIR}/ndo2db.init ndo2db
+	newconfd ${FILESDIR}/ndo2db.conf.d ndo2db
 }
 
 pkg_postinst() {
