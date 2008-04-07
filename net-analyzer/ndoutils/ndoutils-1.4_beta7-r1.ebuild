@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="dev-db/mysql"
 RDEPEND="${DEPEND}
-	>=net-analyzer/nagios-core-2.7"
+	>=net-analyzer/nagios-core-3.0"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,48 +28,39 @@ pkg_setup() {
 
 src_compile() {
 	econf \
-		--prefix=/usr/nagios \
+		--prefix=/usr \
+		--bindir=/usr/sbin \
 		--sysconfdir=/etc/nagios \
+		--with-ndo2db-user=nagios \
+		--with-ndo2db-group=nagios \
 		--enable-mysql \
 		--disable-pgsql || die "econf failed"
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	dodir /usr/nagios/bin
-	cp ${S}/src/{file2sock,log2ndo,ndo2db-2x,ndo2db-3x,ndomod-2x.o,ndomod-3x.o,sockdebug} ${D}/usr/nagios/bin
+	dodir /usr/sbin
+	cp ${S}/src/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} ${D}/usr/sbin
 
 	dodir /usr/nagios/share/
 	cp -R ${S}/db ${D}/usr/nagios/share
 
-	chown -R root:nagios ${D}/usr/nagios || die "Failed chown of ${D}/usr/nagios"
-	chmod 750 ${D}/usr/nagios/bin/{file2sock,log2ndo,ndo2db-2x,ndo2db-3x,ndomod-2x.o,ndomod-3x.o,sockdebug} || "Failed chmod"
+	chmod 755 ${D}/usr/sbin/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} || "Failed chmod"
 
 	dodoc README REQUIREMENTS TODO UPGRADING Changelog "docs/NDOUTILS DB Model.pdf" "docs/NDOUtils Documentation.pdf"
 
-cat << EOF > "${T}"/55-ndoutils-revdep
-SEARCH_DIRS="/usr/nagios/bin"
-EOF
-
 	sed -i s:socket_name=/usr/local/nagios/var/ndo.sock:socket_name=/var/nagios/ndo.sock:g ${S}/config/ndo2db.cfg
-
-	insinto /etc/revdep-rebuild
-	doins "${T}"/55-ndoutils-revdep
 
 	insinto /etc/nagios
 	doins ${S}/config/ndo2db.cfg
 	doins ${S}/config/ndomod.cfg
 
 	newinitd ${FILESDIR}/ndo2db.init ndo2db
-	newconfd ${FILESDIR}/ndo2db.conf.d ndo2db
 }
 
 pkg_postinst() {
 	elog "To include NDO in your Nagios setup you'll need to activate the NDO broker module"
 	elog "in /etc/nagios/nagios.cfg:"
-	elog "\tbroker_module=/usr/nagios/bin/ndomod-2x.o config_file=/etc/nagios/ndomod.cfg"
-	elog "\t\tor"
 	elog "\tbroker_module=/usr/nagios/bin/ndomod-3x.o config_file=/etc/nagios/ndomod.cfg"
-	elog "\t\trespectively."
 }

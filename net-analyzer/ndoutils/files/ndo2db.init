@@ -4,9 +4,6 @@
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/files/ndo2db.init,v 1.1 2007/07/01 08:29:56 dertobi123 Exp $
 
 MY_NAGIOS_MAIN_VERSION=3
-if [ "$NAGIOS_MAIN_VERSION" = "2" ] ; then
-    MY_NAGIOS_MAIN_VERSION=2
-fi
 
 depends() {
 	before nagios
@@ -15,14 +12,14 @@ depends() {
 
 start() {
 	ebegin "Starting ndo2db"
-	start-stop-daemon --start --quiet --exec /usr/nagios/bin/ndo2db-${MY_NAGIOS_MAIN_VERSION}x \
+	start-stop-daemon --start --quiet --exec /usr/sbin/ndo2db-${MY_NAGIOS_MAIN_VERSION}x \
 	-- -c /etc/nagios/ndo2db.cfg
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping ndo2db"
-	start-stop-daemon --stop --quiet --exec /usr/nagios/bin/ndo2db-${MY_NAGIOS_MAIN_VERSION}x
+	start-stop-daemon --stop --quiet --exec /usr/sbin/ndo2db-${MY_NAGIOS_MAIN_VERSION}x
 	eend $?
 }
 
