@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios,v 1.10 2007/05/08 21:36:14 dertobi123 Exp $
+
+depend() {
+        need net
+        before nagios
+}
+
+start() {
+        ebegin "Starting PNP 4 Nagios"
+        start-stop-daemon --quiet --start --startas /usr/sbin/npcd \
+                -e HOME="/var/nagios/home" --pidfile /var/run/npcd.pid \
+                -- -d -f /etc/nagios/pnp/npcd.cfg
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping PNP 4 Nagios"
+        start-stop-daemon --quiet --stop --pidfile /var/run/npcd.pid
+        eend $?
+}
+
+svc_restart() {
+        ebegin "Restarting PNP 4 Nagios"
+        svc_stop
+        svc_start
+        eend $?
+}
+
