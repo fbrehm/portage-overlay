@@ -45,6 +45,7 @@ src_compile() {
 
 
 src_install() {
+
 	dodoc AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README README.npcd README.pnpsender THANKS TODO
 
 	emake DESTDIR="${D}" HTMLDIR=/usr/share/nagios/htdocs/pnp install
@@ -58,12 +59,18 @@ src_install() {
 	mv "${D}"/etc/nagios/pnp/process_perfdata.cfg-sample "${D}"/etc/nagios/pnp/process_perfdata.cfg
 	mv "${D}"/etc/nagios/pnp/rra.cfg-sample "${D}"/etc/nagios/pnp/rra.cfg
 
+	mkdir -p "${D}"/var/nagios/perfdata
+	mkdir -p "${D}"/var/nagios/spool/perfdata
+	chown nagios:nagios "${D}"/var/nagios/perfdata
+	chown nagios:nagios "${D}"/var/nagios/spool/perfdata
+	chmod 775 "${D}"/var/nagios/perfdata
+	chmod 775 "${D}"/var/nagios/spool/perfdata
+
 	keepdir /etc/nagios/pnp
 	keepdir /var/nagios
 	keepdir /var/nagios/perfdata
 	keepdir /var/nagios/spool/perfdata
 
 	doinitd "${FILESDIR}"/npcd
-
 
 }
