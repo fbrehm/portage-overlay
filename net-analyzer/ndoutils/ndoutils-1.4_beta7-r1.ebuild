@@ -43,8 +43,8 @@ src_install() {
 	dodir /usr/sbin
 	cp ${S}/src/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} ${D}/usr/sbin
 
-	dodir /usr/nagios/share/
-	cp -R ${S}/db ${D}/usr/nagios/share
+	dodir /usr/share/nagios/
+	cp -R ${S}/db ${D}/usr/share/nagios/
 
 	chmod 755 ${D}/usr/sbin/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} || "Failed chmod"
 
