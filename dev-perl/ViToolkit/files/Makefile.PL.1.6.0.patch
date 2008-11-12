@@ -1,0 +1,16 @@
+--- Makefile.PL.orig	2008-07-13 05:39:51.000000000 +0200
++++ Makefile.PL	2008-11-12 13:03:44.000000000 +0100
+@@ -109,11 +109,11 @@
+ 
+ install_vmware_apps :
+ 	$(NOECHO) $(MOD_INSTALL) \
+-		$(INST_VMWARE_APPS) $(DEST_VMWARE_APPS)
++		$(INST_VMWARE_APPS) $(DESTDIR)$(DEST_VMWARE_APPS)
+ 
+ install_vmware_doc :
+ 	$(NOECHO) $(MOD_INSTALL) \
+-		$(INST_VMWARE_DOC) $(DEST_VMWARE_DOC)
++		$(INST_VMWARE_DOC) $(DESTDIR)$(DEST_VMWARE_DOC)
+ 
+ clean ::
+ 	$(RM_RF) VMware WSMan
