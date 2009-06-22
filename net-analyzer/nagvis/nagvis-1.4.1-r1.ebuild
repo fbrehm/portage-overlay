@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.3.ebuild,v 1.2 2008/08/03 19:59:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.4.1.ebuild,v 1.1 2009/06/19 20:13:16 dertobi123 Exp $
 
 inherit eutils confutils depend.php
 
@@ -10,11 +10,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="automap"
 
-DEPEND=">=net-analyzer/nagios-3
-		>=net-analyzer/ndoutils-1.4_beta4
+DEPEND=""
+RDEPEND=">=net-analyzer/ndoutils-1.4_beta4
 		automap? ( >=media-gfx/graphviz-2.14 )"
 
 need_php_httpd
@@ -31,18 +31,29 @@ src_install() {
 		rm ${docfile}
 	done
 
-	dodir /usr/share
 	grep -Rl "/usr/local" "${S}"/* | xargs sed -i s:/usr/local:/usr:g
-	mv "${S}" "${D}"/usr/share/nagvis
-	chmod 664 "${D}"/usr/share/nagvis/etc/config.ini.php.dist
-	chmod 775 "${D}"/usr/share/nagvis/images/maps
-	chmod 664 "${D}"/usr/share/nagvis/images/maps/*
-	chmod 775 "${D}"/usr/share/nagvis/etc/maps
-	chmod 664 "${D}"/usr/share/nagvis/etc/maps/*
+
+	dodir /usr/share/nagvis
+	mv "${S}"/{config.php,index.php,nagvis,wui} "${D}"/usr/share/nagvis/
+
+	dodir /var/nagvis
+	dosym /var/nagvis /usr/share/nagvis/var
+	fowners apache:root /var/nagvis
+
+	dodir /etc/nagvis
+	mv "${S}"/etc/* "${D}"/etc/nagvis/
+	dosym /etc/nagvis /usr/share/nagvis/etc
+
+	fperms 664 /etc/nagvis/nagvis.ini.php-sample
+	fperms 775 /etc/nagvis/maps
+	fowners apache:root /etc/nagvis/maps
+	fperms 664 /etc/nagvis/maps/*cfg
+	fowners apache:root /etc/nagvis/maps/*cfg
 }
+
 pkg_postinst() {
 	elog "Before running NagVis for the first time, you will need to set up"
-	elog "/usr/share/nagvis/nagvis/etc/config.ini.php"
+	elog "/etc/nagvis/nagvis.ini.php"
 	elog "A sample is in"
-	elog "/usr/share/nagvis/nagvis/etc/config.ini.php.dist"
+	elog "/etc/nagvis/nagvis.ini.php-sample"
 }
