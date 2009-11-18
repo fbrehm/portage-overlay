@@ -17,7 +17,8 @@ IUSE=" examples "
 
 src_install() {
 
-	emake install DESTDIR="${D}" || die
+	#emake install DESTDIR="${D}" || die
+	perl-module_src_install
 
 	if use examples ; then
 		exeinto /usr/share/doc/${PF}/examples
