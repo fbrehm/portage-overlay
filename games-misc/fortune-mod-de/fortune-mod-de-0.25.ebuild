@@ -19,12 +19,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/fortunes-de-${PV}
 
-#src_unpack() {
-#	unpack ${A}
-#	cd "${S}"
-#	rm -f install.sh
-#}
-
 src_compile() {
 
 	cd ${S}
@@ -39,8 +33,6 @@ src_compile() {
 			# convert to UTF-8
 			iconv --from-code latin1 --to-code utf8 -o"${dat}.utf8" "${dat}"
 			mv "${dat}.utf8" "${dat}"
-			# Create file with extension *.u8 to give fortune binary a hint to this encoding
-#			ln -s "${base}" "${dat}".u8
 		fi
 		strfile -s "${dat}"
 	}
@@ -132,8 +124,9 @@ src_install() {
 		dosed "s/iso-8859-1/utf-8/g" usr/bin/spruch
 
 		cd ${S}
+		# Create file with extension *.u8 to give fortune binary a hint to this encoding
 		for f in $( ls -1 dat | grep -v ".dat$" ) ; do
-			einfo "Linking '${f}' ..."
+			echo "Linking '${f}' ..."
 			dosym ${f} /usr/share/fortune/de/${f}.u8
 		done
 	fi
