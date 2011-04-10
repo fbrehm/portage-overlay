@@ -23,9 +23,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-li
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend "
-	media-gfx/graphviz
+DEPEND="
 	doc? (
+		media-gfx/graphviz
 		>=dev-ruby/rdoc-3.5.1
-	)"
+	)
+"
 
