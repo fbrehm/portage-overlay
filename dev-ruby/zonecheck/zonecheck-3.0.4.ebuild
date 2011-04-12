@@ -13,34 +13,57 @@ SRC_URI="http://www.zonecheck.fr/download/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
-IUSE="cgi"
+IUSE="cgi doc"
 
 S="${WORKDIR}/${PN}"
+
+RUBY="/usr/bin/ruby18"
 
 RDEPEND="=dev-lang/ruby-1.8*[ssl]
 	net-misc/iputils
 	>=dev-ruby/dnsruby-1.5
+	cgi? ( virtual/httpd-cgi )
 "
 
-DOCS="ABOUT-NLS AUTHORS ChangeLog* COPYING INSTALL LICENSE NEWS README TODO TRANSLATORS"
+DEPEND="
+	$RDEPEND
+	dev-lang/perl
+"
+
+DOCS="BUGS ChangeLog COPYING CREDITS FAQ GPL HISTORY INSTALL README TODO"
+if use doc; then
+	DOCS="${DOCS} doc"
+fi
 
 src_configure() {
-	echo "No configure necessary"
+	elog "No configure necessary"
 }
 
 src_compile() {
-	ruby installer.rb -DCHROOT=${D} \
-		-DPREFIX=/usr -DETCDIR=/etc -DETCDIST= \
-		-DLIBEXEC=/usr/share -DMANDIR=/usr/share/man -DRUBY=/usr/bin/ruby18 \
-		common cli doc
+	elog "No compiling necessary"
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${WORKDIR}"/${PN}_build/common cmake-utils_src_test
+	#LD_LIBRARY_PATH="${WORKDIR}"/${PN}_build/common cmake-utils_src_test
+	einfo "No test available"
 }
 
 src_install() {
-	cmake-utils_src_install
+	INST_OPTS="-DCHROOT=${D} -DPREFIX=/usr -DETCDIR=/etc -DETCDIST= "
+	INST_OPTS="${INST_OPTS} -DLIBEXEC=/usr/share -DMANDIR=/usr/share/man -DRUBY=${RUBY}"
+	TARGETS="common cli"
+	if use cgi; then
+		INST_OPTS="${INST_OPTS} -DCGIDIR=/var/www/localhost/cgi-bin/ -DWWWDIR=/usr/share/zonecheck-cgi -DWWWCGIDIR=/cgi-bin"
+		TARGETS="${TARGETS} cgi"
+	fi
+	ruby installer.rb ${INST_OPTS} ${TARGETS}
+
+	# Patch the configuration file for Linux netkit ping
+	perl -pi -e '
+		s/(<const\s+name\s*=\s*"ping4"\s+value\s*=\s*")[^\"]*("\s*\/>)/$1ping  -n -q -w 5 -c 5 %s >\/dev\/null$2/;
+		s/(<const\s+name\s*=\s*"ping6"\s+value\s*=\s*")[^\"]*("\s*\/>)/$1ping6 -n -q -w 5 -c 5 %s >\/dev\/null$2/;
+	' ${D}/etc/zonecheck/zc.conf
+
 }
 
 
