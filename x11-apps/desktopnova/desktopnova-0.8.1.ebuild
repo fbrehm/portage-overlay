@@ -3,12 +3,17 @@
 # $Header$
 
 EAPI="2"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils cmake-utils distutils
+inherit eutils cmake-utils python
+
+MINOR_VERSION=`echo "${PV}" | sed -e 's/^\([0-9][0-9]*\.[0-9][0-9]*\).*/\1/'`
 
 DESCRIPTION="It changes your desktop wallpaper automatically in a Gnome and Xfce based desktop"
 HOMEPAGE="http://sites.google.com/site/haliner/desktopnova/"
-SRC_URI="http://launchpad.net/gwallpapers/0.7/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/desktopnova/${MINOR_VERSION}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
