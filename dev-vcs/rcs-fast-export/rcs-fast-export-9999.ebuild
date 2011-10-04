@@ -3,11 +3,16 @@
 # $Header: $
 
 EAPI=3
-RESTRICT="nomirror"
+#RESTRICT="nomirror"
 
 DESCRIPTION="Fast-export the RCS history (for git)"
 HOMEPAGE="http://git.oblomov.eu/rcs-fast-export"
-SRC_URI="http://git.oblomov.eu/rcs-fast-export/snapshot/e89bd46260fc2cf7647b1282c7b0c6d0092c6756.tar.gz"
+
+#SRC_URI="http://git.oblomov.eu/rcs-fast-export/snapshot/e89bd46260fc2cf7647b1282c7b0c6d0092c6756.tar.gz"
+
+SRC_URI=""
+EGIT_REPO_URI="git://git.oblomov.eu/rcs-fast-export"
+inherit git-2
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -17,7 +22,7 @@ IUSE=""
 DEPEND="dev-lang/ruby"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/rcs-fast-export-e89bd46"
+#S="${WORKDIR}/rcs-fast-export-e89bd46"
 
 src_compile() {
 	mv -v ${S}/rcs-fast-export.rb ${S}/rcs-fast-export
