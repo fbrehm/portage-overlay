@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+depend() {
+	use clock
+	need net netmount
+}
+
+start() {
+	ebegin "Starting salt master"
+	start-stop-daemon --start --pidfile /var/run/salt-master.pid --exec /usr/bin/salt-master -- --daemon ${SALT_MASTER_OPTIONS}
+	eend $? "Failed to start salt master"
+}
+
+stop() {
+	ebegin "Stopping salt master"
+	start-stop-daemon --stop --pidfile /var/run/salt-master.pid
+	eend $? "Failed to stop salt master"
+}
+

@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+depend() {
+	use clock
+	need net netmount
+}
+
+start() {
+	ebegin "Starting salt minion"
+	start-stop-daemon --start --pidfile /var/run/salt-minion.pid --exec /usr/bin/salt-minion -- --daemon ${SALT_MINION_OPTIONS}
+	eend $? "Failed to start salt minion"
+}
+
+stop() {
+	ebegin "Stopping salt minion"
+	start-stop-daemon --stop --pidfile /var/run/salt-minion.pid
+	eend $? "Failed to stop salt minion"
+}
+
