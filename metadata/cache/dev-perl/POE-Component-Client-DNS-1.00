@@ -1,0 +1,22 @@
+>=dev-perl/POE-0.31 >=dev-perl/Net-DNS-0.53 perl-core/Test-Simple
+>=dev-perl/POE-0.31 >=dev-perl/Net-DNS-0.53 perl-core/Test-Simple
+0
+http://cpan.perl.org/modules/by-module/POE/POE-Component-Client-DNS-1.00.tar.gz
+nomirror
+http://cpan.perl.org/modules/by-module/POE/POE-Component-Client-DNS-1.00.readme
+Artistic
+Non-blocking/concurrent DNS queries using Net::DNS and POE
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

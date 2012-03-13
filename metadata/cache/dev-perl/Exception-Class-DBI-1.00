@@ -1,0 +1,22 @@
+>=dev-perl/DBI-1.30 >=dev-perl/Exception-Class-1.02 >=virtual/perl-Test-Simple-0.40
+>=dev-perl/DBI-1.30 >=dev-perl/Exception-Class-1.02 >=virtual/perl-Test-Simple-0.40
+0
+mirror://cpan/authors/id/D/DW/DWHEELER/Exception-Class-DBI-1.00.tar.gz
+
+http://www.cpan.org/modules/by-module/Exception/Exception-Class-DBI-1.00.readme
+|| ( Artistic GPL-2 )
+A set of DBI-specific exception classes for perl
+alpha amd64 ia64 ppc sparc x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

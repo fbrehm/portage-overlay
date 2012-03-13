@@ -1,0 +1,22 @@
+>=dev-perl/DBI-1.39
+>=dev-perl/DBI-1.39
+0
+http://cpan.pair.com/modules/by-module/DBD/DBD-Oracle-1.16.tar.gz
+
+http://cpan.pair.com/modules/by-module/DBD/DBD-Oracle-1.16.readme
+Artistic
+an Oracle interface for Perl 5
+x86 ~amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

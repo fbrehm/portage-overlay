@@ -1,0 +1,22 @@
+>=dev-perl/NetAddr-IP-3.07 dev-perl/Net-DNS
+>=dev-perl/NetAddr-IP-3.07 dev-perl/Net-DNS
+0
+http://cpan.pair.com/modules/by-module/Net/Net-DNS-ZoneFile-1.04.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Net/Net-DNS-ZoneFile-1.04.readme
+Artistic
+Perl extension for unparsed raw whois information
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

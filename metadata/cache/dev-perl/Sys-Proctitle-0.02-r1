@@ -1,0 +1,22 @@
+dev-perl/Class-Member
+dev-perl/Class-Member
+0
+http://cpan.pair.com/modules/by-module/Sys/Sys-Proctitle-0.02.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Sys/Sys-Proctitle-0.02.readme
+Artistic
+Sys::Proctitle - modify proctitle on Linux
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

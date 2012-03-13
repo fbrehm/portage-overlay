@@ -1,0 +1,22 @@
+games-misc/fortune-mod unicode? ( virtual/libiconv )
+games-misc/fortune-mod
+0
+http://ftp.de.debian.org/debian/pool/main/f/fortunes-de/fortunes-de_0.25.orig.tar.gz
+
+http://packages.debian.org/source/lenny/fortunes-de/
+GPL-2
+German Quotes for fortune
+alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd
+
+unicode
+
+
+
+
+
+compile install
+
+
+
+
+

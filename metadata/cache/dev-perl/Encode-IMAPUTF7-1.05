@@ -1,0 +1,22 @@
+virtual/perl-Encode dev-perl/Test-NoWarnings
+virtual/perl-Encode dev-perl/Test-NoWarnings
+0
+mirror://cpan/authors/id/P/PM/PMAKHOLM/Encode-IMAPUTF7-1.05.tar.gz
+nomirror
+http://search.cpan.org/dist/Encode-IMAPUTF7/
+|| ( Artistic GPL-2 )
+Encode::IMAPUTF7 - modification of UTF-7 encoding for IMAP
+amd64 x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

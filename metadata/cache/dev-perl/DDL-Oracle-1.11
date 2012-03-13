@@ -1,0 +1,22 @@
+
+
+0
+http://cpan.pair.com/modules/by-module/DDL/DDL-Oracle-1.11.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/DDL/DDL-Oracle-1.11.readme
+Artistic
+A Perl tool to reverse engineer the DDL of Oracle objects from Oracle
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

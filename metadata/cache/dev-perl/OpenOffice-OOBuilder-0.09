@@ -1,0 +1,22 @@
+dev-perl/Archive-Zip
+dev-perl/Archive-Zip
+0
+http://search.cpan.org/CPAN/authors/id/M/MA/MAYGILL/OpenOffice-OOBuilder-0.09.tar.gz
+nomirror
+http://search.cpan.org/~maygill/OpenOffice-OOBuilder-0.09/
+|| ( Artistic GPL-2 )
+A collection of modules to create OpenOffice documents
+amd64 x86
+base eutils multilib perl-module toolchain-funcs user
+examples
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+0
+http://cpan.perl.org/modules/by-module/Date/Date-Simple-3.02.tar.gz
+nomirror
+http://cpan.perl.org/modules/by-module/Date/.readme
+Artistic
+A simple date object in Perl
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

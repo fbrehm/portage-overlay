@@ -1,0 +1,22 @@
+>=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+>=sys-devel/gcc-4 >=sys-devel/gettext-0.17 >=sys-devel/make-3.81 >=dev-util/cmake-2.6.4 >=dev-lang/python-2.6 >=x11-libs/gtk+-2.14.0 >=dev-libs/glib-2 gnome? ( >=gnome-base/gconf-2 ) xfce? ( >=xfce-base/xfconf-4 ) >=dev-libs/libxml2-2.7 >=dev-libs/dbus-glib-0.76 >=app-admin/eselect-python-20091230 =dev-lang/python-2*
+0
+http://launchpad.net/desktopnova/0.8/0.8.1/+download/desktopnova-0.8.1.tar.gz
+
+http://sites.google.com/site/haliner/desktopnova/
+GPL-2
+It changes your desktop wallpaper automatically in a Gnome and Xfce based desktop
+~amd64 ~ia64 ~x86
+base cmake-utils eutils flag-o-matic multilib python toolchain-funcs user versionator
+gnome xfce
+
+
+
+2
+
+compile configure install prepare test unpack
+
+
+
+
+

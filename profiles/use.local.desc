@@ -1,10 +1,5 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Id$
-# $URL$
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using egencache *
 
-# This file contains descriptions of local USE flags, and the ebuilds which
-# contain them.
-
-# Keep it sorted.
-
+net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz

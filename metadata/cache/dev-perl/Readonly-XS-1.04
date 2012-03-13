@@ -1,0 +1,22 @@
+>=dev-perl/Readonly-1.02
+>=dev-perl/Readonly-1.02
+0
+http://search.cpan.org/CPAN/authors/id/R/RO/ROODE/Readonly-XS-1.04.tar.gz
+nomirror
+http://search.cpan.org/src/ROODE/Readonly-XS-1.04/README
+|| ( Artistic GPL-2 )
+companion module to Readonly.pm
+~amd64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

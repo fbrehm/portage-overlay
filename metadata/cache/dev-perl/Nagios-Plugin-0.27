@@ -1,0 +1,22 @@
+dev-perl/Params-Validate dev-perl/Class-Accessor >=perl-core/Test-Simple-0.62 dev-perl/Math-Calc-Units dev-perl/Config-Tiny perl-core/File-Spec
+dev-perl/Params-Validate dev-perl/Class-Accessor >=perl-core/Test-Simple-0.62 dev-perl/Math-Calc-Units dev-perl/Config-Tiny perl-core/File-Spec
+0
+http://search.cpan.org/CPAN/authors/id/T/TO/TONVOON/Nagios-Plugin-0.27.tar.gz
+nomirror
+http://search.cpan.org/CPAN/authors/id/T/TO/TONVOON/Nagios-Plugin-0.27.readme
+Artistic
+perl modules to streamline writing Nagios plugins
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

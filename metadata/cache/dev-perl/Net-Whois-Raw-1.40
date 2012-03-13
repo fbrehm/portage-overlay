@@ -1,0 +1,22 @@
+
+
+0
+http://cpan.pair.com/modules/by-module/Net/Net-Whois-Raw-1.40.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Net/Net-Whois-Raw-1.40.readme
+Artistic
+Perl extension for unparsed raw whois information
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+0
+http://www.cpan.org/modules/by-module/OpenGL/OpenGL-0.56.tar.gz
+nomirror
+http://www.cpan.org/modules/by-module/OpenGL/OpenGL-0.56.readme
+Artistic
+this library is a simple binding between Perl and any library that complies with the OpenGL API
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+
