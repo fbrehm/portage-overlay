@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
+	<maintainer>
+  		<email>frank@brehm-online.com</email>
+  		<name>Frank Brehm</name>
+  		<description>Primary maintainer</description>
+	</maintainer>
+	<use>
+		<flag name='unicode'>Encode fortune data in utf-8.</flag>
+	</use>
 </pkgmetadata>
