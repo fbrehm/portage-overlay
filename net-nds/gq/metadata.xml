@@ -8,6 +8,6 @@
     <description>Primary maintainer</description>
   </maintainer>
   <use>
-    <flag name='automap'>Enable automated map generation using <pkg>media-gfx/graphviz</pkg></flag>
+    <flag name='ssl'>Adds support for SSL/TLS connections</flag>
   </use>
 </pkgmetadata>

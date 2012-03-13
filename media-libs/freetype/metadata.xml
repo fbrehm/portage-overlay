@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>no-herd</herd>
+  <herd>fonts</herd>
   <maintainer>
     <email>frank@brehm-online.com</email>
     <name>Frank Brehm</name>
     <description>Primary maintainer</description>
   </maintainer>
   <use>
-    <flag name='automap'>Enable automated map generation using <pkg>media-gfx/graphviz</pkg></flag>
+    <flag name='doc'>Install HTML documentation.</flag>
+    <flag name="kpathsea">Enable TeX support (ttf2pk and ttf2pfb)</flag>
   </use>
 </pkgmetadata>
