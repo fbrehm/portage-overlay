@@ -3,3 +3,5 @@
 # * generated automatically using egencache *
 
 net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz
+x11-apps/desktopnova:gnome - Enable generating of a Gnome supporting module.
+x11-apps/desktopnova:xfce - Enable generating of a XFCE supporting module.
