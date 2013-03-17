@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>frank@brehm-online.com</email>
+  <name>Frank Brehm</name>
+  <description>Primary maintainer</description>
+</maintainer>
+<use>
+  <flag name='gnome'>Enable generating of a Gnome supporting module.</flag>
+  <flag name='xfce'>Enable generating of a XFCE supporting module.</flag>
+</use>
+</pkgmetadata>

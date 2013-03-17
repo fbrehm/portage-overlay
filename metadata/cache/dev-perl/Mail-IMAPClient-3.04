@@ -1,0 +1,22 @@
+
+
+0
+http://cpan.pair.com/modules/by-module/Mail/Mail-IMAPClient-3.04.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Mail/Mail-IMAPClient-3.04.readme
+Artistic
+Provides simplify a sockets connection to and an IMAP conversation with an IMAP server
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

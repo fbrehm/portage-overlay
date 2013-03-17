@@ -1,0 +1,22 @@
+dev-lang/perl >=dev-perl/Crypt-SSLeay-0.51 >=dev-perl/Class-MethodMaker-2.08 >=dev-perl/XML-LibXML-1.58 >=dev-perl/libwww-perl-5.8.05
+dev-lang/perl >=dev-perl/Crypt-SSLeay-0.51 >=dev-perl/Class-MethodMaker-2.08 >=dev-perl/XML-LibXML-1.58 >=dev-perl/libwww-perl-5.8.05
+0
+VMware-VIPerl-Toolkit-1.5.0-source.tar.gz
+fetch
+http://www.vmware.com/support/developer/viperltoolkit/
+Artistic
+The VI Perl Toolkit provides an easy-to-use Perl scripting interface to the VMware Infrastructure API (VI API).
+~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install nofetch postinst postrm preinst prerm setup test unpack
+
+
+
+
+

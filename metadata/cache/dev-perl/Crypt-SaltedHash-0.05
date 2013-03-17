@@ -1,0 +1,22 @@
+perl-core/digest-base
+perl-core/digest-base
+0
+http://cpan.pair.com/modules/by-module/Crypt/Crypt-SaltedHash-0.05.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Crypt/Crypt-SaltedHash-0.05.readme
+Artistic
+Crypt::SaltedHash - Perl interface to functions that assist in working with salted hashes
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

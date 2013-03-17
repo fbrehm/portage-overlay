@@ -1,10 +1,19 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Id$
-# $URL$
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using egencache *
 
-# This file contains descriptions of local USE flags, and the ebuilds which
-# contain them.
-
-# Keep it sorted.
-
+app-emulation/vmware-esx-tools:X - Install a default xorg.conf in /etc/X11
+dev-db/mysqltool:apache2 - Install apache configuration under /etc/apache2 instead of /etc/apache.
+dev-perl/catalystframework-extras:sqlite - Add dependency to dev-perl/Class-DBI-SQLite.
+dev-ruby/zonecheck:cgi - Add dependency to virtual/httpd-cgi.
+dev-ruby/zonecheck:doc - Enable generating of documentation.
+games-misc/fortune-mod-de:unicode - Encode fortune data in utf-8.
+games-misc/fortune-mod-fvl:unicode - Encode fortune data in utf-8.
+media-libs/freetype:doc - Install HTML documentation.
+media-libs/freetype:kpathsea - Enable TeX support (ttf2pk and ttf2pfb)
+net-analyzer/nagios-nrpe:command-args - allow clients to specify command arguments
+net-analyzer/nagios-nrpe:ssl - Adds support for SSL connections
+net-analyzer/nagvis:automap - Enable automated map generation using media-gfx/graphviz
+net-nds/gq:ssl - Adds support for SSL/TLS connections
+x11-apps/desktopnova:gnome - Enable generating of a Gnome supporting module.
+x11-apps/desktopnova:xfce - Enable generating of a XFCE supporting module.

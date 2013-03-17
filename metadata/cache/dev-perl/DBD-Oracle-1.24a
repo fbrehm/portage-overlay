@@ -1,0 +1,22 @@
+>=dev-perl/DBI-1.51
+>=dev-perl/DBI-1.51
+0
+mirror://cpan/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.24a.tar.gz
+nomirror
+http://search.cpan.org/dist/DBD-Oracle/
+Artistic
+an Oracle interface for Perl 5
+x86 ~amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+0
+http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMOY/Lingua-EN-Sentence-0.25.tar.gz
+nomirror
+http://search.cpan.org/~shlomoy/Lingua-EN-Sentence-0.25/lib/Lingua/EN/Sentence.pm
+Artistic
+Module for splitting text into sentences.
+x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

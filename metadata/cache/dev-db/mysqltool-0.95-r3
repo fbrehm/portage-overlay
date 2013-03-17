@@ -1,0 +1,22 @@
+virtual/libc dev-lang/perl >=dev-db/mysql-3.23.38 dev-perl/CGI dev-perl/Apache-DBI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish
+virtual/libc dev-lang/perl >=dev-db/mysql-3.23.38 dev-perl/CGI dev-perl/Apache-DBI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish || ( >=net-www/apache-1.3.24-r1 apache2? ( >=net-www/apache-2.0.45 ) )
+0
+http://www.brouhaha.com/~eric/software/mysqltool/download/MysqlTool-0.95.tar.gz
+
+http://www.brouhaha.com/~eric/software/mysqltool/
+GPL-2
+Web interface for managing one or more mysql server installations
+~x86 ~sparc ~ppc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+apache2
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

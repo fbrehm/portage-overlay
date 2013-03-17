@@ -1,0 +1,22 @@
+
+
+0
+http://search.cpan.org/CPAN/authors/id/S/SF/SFINK/Math-Calc-Units-1.06.tar.gz
+nomirror
+http://search.cpan.org/CPAN/authors/id/S/SF/SFINK/Math-Calc-Units-1.06.readme
+Artistic
+Human-readable unit-aware calculator
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

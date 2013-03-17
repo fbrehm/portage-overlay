@@ -1,0 +1,22 @@
+
+
+0
+http://www.cpan.org/modules/by-module/Acme/Acme-Time-Baby-2.106.tar.gz
+nomirror
+http://cpan.pair.com/modules/by-module/Acme/Acme-Time-Baby-2.106.readme
+Artistic
+Tell time little children can understand
+x86 amd64 ~ppc sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

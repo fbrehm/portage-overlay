@@ -1,0 +1,22 @@
+>=net-dns/libidn-0.3.5
+>=net-dns/libidn-0.3.5
+0
+http://search.cpan.org/CPAN/authors/id/T/TH/THOR/Net-LibIDN-0.10.tar.gz
+nomirror
+http://search.cpan.org/~thor/Net-LibIDN-0.08/
+Artistic
+Perl bindings for GNU Libidn
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

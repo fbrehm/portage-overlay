@@ -1,0 +1,22 @@
+dev-lang/ruby dev-vcs/git
+dev-lang/ruby
+0
+
+
+http://git.oblomov.eu/rcs-fast-export
+GPL-3
+Fast-export the RCS history (for git)
+~x86
+git-2
+
+
+
+
+3
+
+compile install unpack
+
+
+
+
+

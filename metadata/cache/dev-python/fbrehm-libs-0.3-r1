@@ -1,0 +1,22 @@
+>=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+>=app-admin/eselect-python-20091230 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+0
+http://www.brehm-online.com/projects/fbrehm-libs/fbrehm-libs-0.3.tar.gz
+nomirror
+http://www.brehm-online.com/projects/
+GPL-3
+A collection of common python modules by Frank Brehm
+~amd64 ~x86
+distutils multilib python toolchain-funcs
+
+
+
+
+3
+
+compile install postinst postrm prepare
+
+
+
+
+

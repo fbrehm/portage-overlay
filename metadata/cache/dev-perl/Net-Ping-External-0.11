@@ -1,0 +1,22 @@
+
+
+0
+http://www.cpan.org/modules/by-module/Net/Net-Ping-External-0.11.tar.gz
+mirror
+http://cpan.pair.com/modules/by-module/Net/Net-Ping-External-0.11.readme
+Artistic
+Cross-platform interface to ICMP 'ping' utilities
+x86 amd64 ~ppc sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

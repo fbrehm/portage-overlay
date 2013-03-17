@@ -1,0 +1,22 @@
+>=dev-perl/POE-0.31 >=dev-perl/Net-SSLeay-1.30
+>=dev-perl/POE-0.31 >=dev-perl/Net-SSLeay-1.30
+0
+http://cpan.perl.org/modules/by-module/POE/POE-Component-SSLify-0.10.tar.gz
+nomirror
+http://cpan.perl.org/modules/by-module/POE/POE-Component-SSLify-0.10.readme
+Artistic
+This module makes Net::SSLeay's SSL sockets behave with POE
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

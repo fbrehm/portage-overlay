@@ -1,0 +1,22 @@
+
+
+0
+http://www.cpan.org/authors/id/M/MI/MIYAGAWA/IDNA-Punycode-0.02.tar.gz
+mirror
+http://search.cpan.org/~miyagawa/IDNA-Punycode-0.02/lib/IDNA/Punycode.pm
+Artistic
+A module to encode / decode Unicode strings into Punycode, an efficient encoding of Unicode for use with IDNA.
+x86 amd64 ~ppc ~sparc ~alpha
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

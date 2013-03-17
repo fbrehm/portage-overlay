@@ -1,0 +1,22 @@
+|| ( >=dev-lang/perl-5.8.1 >=perl-core/Scalar-List-Utils-1.11 ) || ( >=dev-lang/perl-5.8.1 >=perl-core/Test-Simple-0.47 ) >=dev-perl/Params-Util-0.05
+|| ( >=dev-lang/perl-5.8.1 >=perl-core/Scalar-List-Utils-1.11 ) || ( >=dev-lang/perl-5.8.1 >=perl-core/Test-Simple-0.47 ) >=dev-perl/Params-Util-0.05
+0
+mirror://cpan/authors/id/A/AD/ADAMK/Params-Coerce-0.14.tar.gz
+
+http://search.cpan.org/dist/Params-Coerce/
+|| ( Artistic GPL-2 )
+Allows your classes to do coercion of parameters
+amd64 x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

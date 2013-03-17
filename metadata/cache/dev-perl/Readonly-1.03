@@ -1,0 +1,22 @@
+
+
+0
+http://search.cpan.org/CPAN/authors/id/R/RO/ROODE/Readonly-1.03.tar.gz
+nomirror
+http://search.cpan.org/src/ROODE/Readonly-1.03/README
+|| ( Artistic GPL-2 )
+facility for creating non-modifiable scalars, arrays, and hashes
+~amd64 ~x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

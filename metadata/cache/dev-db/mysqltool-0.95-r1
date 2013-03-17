@@ -1,0 +1,22 @@
+virtual/libc dev-lang/perl
+virtual/libc dev-lang/perl >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 dev-perl/CGI dev-perl/Apache-DBI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish
+0
+http://www.dajoba.com/projects/mysqltool/MysqlTool-0.95.tar.gz
+
+http://www.dajoba.com/projects/mysqltool/
+GPL-2
+Web interface for managing one or more mysql server installations
+x86 sparc
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+

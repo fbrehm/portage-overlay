@@ -1,0 +1,22 @@
+dev-perl/Catalyst-Runtime >=dev-perl/DBIx-Class-0.01
+dev-perl/Catalyst-Runtime >=dev-perl/DBIx-Class-0.01
+0
+mirror://cpan/authors/id/G/GA/GABB/Catalyst-Model-DBIC-Plain-0.03.tar.gz
+nomirror
+http://search.cpan.org/dist/Catalyst-Model-DBIC-Plain/
+|| ( Artistic GPL-2 )
+DBIC Model Class
+alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86
+base eutils multilib perl-module toolchain-funcs user
+
+
+
+
+
+
+compile install postinst postrm preinst prerm setup test unpack
+
+
+
+
+
