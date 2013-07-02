@@ -23,7 +23,7 @@ EGIT_COMMIT=$(replace_version_separator 3 '-')
 DOCS="debian/changelog README.txt"
 
 RDEPEND="
-	dev-python/argparse
+	virtual/python-argparse
 "
 DEPEND="
 	${RDEPEND}
