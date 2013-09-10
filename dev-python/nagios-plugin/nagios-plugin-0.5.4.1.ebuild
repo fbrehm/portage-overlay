@@ -14,23 +14,28 @@ inherit git-2 distutils user python versionator
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="doc"
+IUSE="doc megaraid smart"
 PYTHON_DEPEND="2::2.7"
 
-EGIT_BRANCH="develop"
+EGIT_BRANCH="master"
 EGIT_COMMIT=$(replace_version_separator 3 '-')
 
 DOCS="debian/changelog README.txt"
 
 RDEPEND="
-	dev-python/argparse
+	virtual/python-argparse
+	dev-python/setuptools
+	smart? ( sys-apps/smartmontools )
+	megaraid? ( sys-block/megacli )
 "
 DEPEND="
 	${RDEPEND}
-	doc? (	dev-python/epydoc 
+	doc? (	dev-python/epydoc
 			dev-python/docutils
 	)
 "
+
+REQUIRED_USE="megaraid? ( smart )"
 
 pkg_setup() {
 	elog "Used GIT tag: '${EGIT_COMMIT}'."
@@ -41,6 +46,8 @@ pkg_setup() {
 src_install() {
 	distutils_src_install
 	#python_clean_installation_image
+
+	use smart || rm ${D}/usr/bin/check_smart_state
 
 	if use doc; then
 		einfo "Installing documentation ..."
