@@ -1,17 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=4
 
 DESCRIPTION="Python modules for common used objects, error classes and functions."
 HOMEPAGE="https://github.com/fbrehm/py_pb_base"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/fbrehm/py_pb_base.git"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-
-inherit git-2 distutils-r1 user versionator
+inherit git-2 distutils user python versionator
 
 LICENSE="GPL-3"
 SLOT="0"
