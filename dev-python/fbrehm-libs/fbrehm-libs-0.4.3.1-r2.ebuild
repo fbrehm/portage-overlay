@@ -2,16 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-EAPI=4
-PYTHON_DEPEND="2:2.7"
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2} pypy2_0 )
 
 EGIT_REPO_URI="https://github.com/fbrehm/py_fbrehm_libs.git"
 
 RESTRICT="nomirror"
 
-inherit git-2 distutils user python versionator
-
-PYTHON_MODNAME="fbrehm/__init__.py fbrehm/common/__init__.py fbrehm/common/getopt.py fbrehm/common/logging_obj.py"
+inherit git-2 distutils-r1 user versionator
 
 DESCRIPTION="A collection of common python modules by Frank Brehm"
 HOMEPAGE="http://git.brehm-online.com/my-stuff/fbrehm.git"
@@ -22,29 +20,25 @@ EGIT_COMMIT=$(replace_version_separator 3 '-')
 
 DOCS="debian/changelog README.txt"
 
-LICENSE="GPL-3"
+LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc nls"
 
 DEPEND=""
 RDEPEND="
-    virtual/python-argparse
     dev-python/configobj
     nls? ( virtual/libintl )
 "
 
-pkg_setup() {
-
+src_prepare() {
     elog "Used GIT tag: '${EGIT_COMMIT}'."
-
-    python_set_active_version 2
-    python_pkg_setup
+    distutils-r1_src_prepare
 }
 
 src_install() {
-    distutils_src_install
-    #python_clean_installation_image
+
+    distutils-r1_src_install
 
     if use doc; then
         einfo "Installing documentation ..."
@@ -63,13 +57,5 @@ src_install() {
     #    (cd "${S}/po" && make DESTDIR="${ED}" install)
     #fi
 
-}
-
-pkg_postinst() {
-    python_mod_optimize fbrehm
-}
-
-pkg_postrm () {
-    python_mod_cleanup fbrehm
 }
 
