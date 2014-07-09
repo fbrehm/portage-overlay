@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy2_0 )
 
 DESCRIPTION="Python modules for common used objects, error classes and functions."
 HOMEPAGE="https://github.com/fbrehm/py_pb_base"
@@ -22,7 +22,6 @@ EGIT_COMMIT=$(replace_version_separator 3 '-')
 DOCS="debian/changelog README.txt"
 
 RDEPEND="
-	virtual/python-argparse
 	dev-python/configobj
 	>=dev-python/pb-logging-0.2.7
 	nls? ( virtual/libintl )
