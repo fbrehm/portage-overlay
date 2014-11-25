@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
+EAPI=5
+
+MODULE_AUTHOR=CHISEL
+MODULE_VERSION=0.0.5
 inherit perl-module eutils
 
-#S="${WORKDIR}/${P}"
 DESCRIPTION="Template plugin for HTML::ForumCode, a BBCode-esque forum markup"
-SRC_URI="http://cpan.pair.com/modules/by-module/${P%%-*}/${P}.tar.gz"
-HOMEPAGE="http://cpan.pair.com/modules/by-module/${P%%-*}/${P}.readme"
 
 RESTRICT="nomirror"
 

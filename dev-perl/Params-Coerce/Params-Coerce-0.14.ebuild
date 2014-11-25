@@ -2,10 +2,15 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
+
 MODULE_AUTHOR=ADAMK
+MODULE_VERSION=0.14
 inherit perl-module
 
 DESCRIPTION="Allows your classes to do coercion of parameters"
+
+RESTRICT="nomirror"
 
 IUSE=""
 
