@@ -2,29 +2,27 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy2_0 )
 
 DESCRIPTION="Python modules streamline writing Nagios plugins."
-HOMEPAGE="http://git.profitbricks.localdomain/gitweb/?p=python/nagios-plugin;a=summary"
+HOMEPAGE="https://github.com/fbrehm/nagios-plugin"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/fbrehm/nagios-plugin.git"
 
-inherit git-2 distutils user python versionator
+inherit git-2 distutils-r1 user versionator
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
-PYTHON_DEPEND="2::2.7"
 
 EGIT_BRANCH="master"
-EGIT_COMMIT=$(replace_version_separator 3 '-')
+EGIT_COMMIT="$(replace_version_separator 3 '-')_deb6"
 
 DOCS="debian/changelog README.txt"
 
-RDEPEND="
-	virtual/python-argparse
-"
+RDEPEND=""
 DEPEND="
 	${RDEPEND}
 	doc? (	dev-python/epydoc 
@@ -34,13 +32,28 @@ DEPEND="
 
 pkg_setup() {
 	elog "Used GIT tag: '${EGIT_COMMIT}'."
-	python_set_active_version 2
-	python_pkg_setup
+
+    einfo "Start setup package ..."
+    distutils-r1_src_prepare
+
+}
+
+src_compile() {
+    einfo "Start compiling package ..."
+    distutils-r1_src_compile
 }
 
 src_install() {
-	distutils_src_install
-	#python_clean_installation_image
+    einfo "Start installing package ..."
+
+	distutils-r1_src_install
+
+    rm -rfv ${ED}/usr/lib*/nagios/
+    rm -rfv ${ED}/usr/lib*/python*/site-packages/nagios/plugins/
+
+    einfo "Installing debian/changelog and README.txt"
+    dodoc debian/changelog
+    dodoc README.txt
 
 	if use doc; then
 		einfo "Installing documentation ..."
@@ -57,11 +70,4 @@ src_install() {
 
 }
 
-pkg_postinst() {
-	python_mod_optimize nagios
-}
-
-pkg_postrm () {
-    python_mod_cleanup nagios
-}
-
+# vim: filetype=ebuild ts=4 sw=4
