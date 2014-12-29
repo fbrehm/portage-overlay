@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy2_0 )
+
 
 DESCRIPTION="Python modules to extend the logging mechanism in Python."
 HOMEPAGE="https://github.com/fbrehm/py_pb_logging"
@@ -14,16 +15,15 @@ inherit git-2 distutils-r1 user versionator
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
-EGIT_BRANCH="develop"
-EGIT_COMMIT=$(replace_version_separator 3 '-')
+EGIT_BRANCH="master"
+EGIT_COMMIT="$(replace_version_separator 3 '-')_deb6"
 
 DOCS="debian/changelog README.txt"
 
 RDEPEND="
-	virtual/python-argparse
 "
 DEPEND="
 	${RDEPEND}
@@ -56,3 +56,4 @@ src_install() {
 
 }
 
+# vim: filetype=ebuild ts=4 sw=4
