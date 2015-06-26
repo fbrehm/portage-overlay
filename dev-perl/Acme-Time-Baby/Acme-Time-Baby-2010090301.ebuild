@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
+EAPI=5
+MODULE_AUTHOR=ABIGAIL
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Tell time little children can understand"
-SRC_URI="http://www.cpan.org/modules/by-module/Acme/${P}.tar.gz"
-HOMEPAGE="http://cpan.pair.com/modules/by-module/Acme/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
