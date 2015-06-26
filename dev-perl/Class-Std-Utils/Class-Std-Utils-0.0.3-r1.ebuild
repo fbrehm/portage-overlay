@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-inherit perl-module eutils
+EAPI=5
+MODULE_AUTHOR=DMUEY
+inherit perl-module
 
+SRC_URI="http://cpan.pair.com/modules/by-module/Class/${PN}-v${PV}.tar.gz"
 S=${WORKDIR}/${PN}-v${PV}
 DESCRIPTION="Class::Std::Utils - simplify the creation of 'inside-out' classes"
-SRC_URI="http://cpan.pair.com/modules/by-module/${P%%-*}/${PN}-v${PV}.tar.gz"
-HOMEPAGE="http://cpan.pair.com/modules/by-module/${P%%-*}/${P}.readme"
 
 RESTRICT="nomirror"
 
