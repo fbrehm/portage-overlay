@@ -17,11 +17,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-    dev-python/setuptools[${PYTHON_USEDEP}]
-    test? ( dev-python/pytest[${PYTHON_USEDEP}] )
-    "
+RDEPEND="
+	dev-python/mako[${PYTHON_USEDEP}]
+	dev-python/glob2[${PYTHON_USEDEP}]
+	>=dev-python/pytest-2.6.0[${PYTHON_USEDEP}]
+	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
+"
+DEPEND="${RDEPEND}"
 
 # https://bitbucket.org/hpk42/pytest-cache/issues/12
 RESTRICT=test
