@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4,3_5} pypy2_0 )
 
 
 DESCRIPTION="Python modules to extend the logging mechanism in Python."
@@ -19,7 +19,7 @@ KEYWORDS="amd64 x86"
 IUSE="doc"
 
 EGIT_BRANCH="master"
-EGIT_COMMIT="$(replace_version_separator 3 '-')_deb6"
+EGIT_COMMIT="$(replace_version_separator 3 '-')"
 
 DOCS="debian/changelog README.txt"
 
