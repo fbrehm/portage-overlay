@@ -12,10 +12,11 @@ MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Python binding to exiv2"
 HOMEPAGE="http://tilloy.net/dev/pyexiv2/"
 SRC_URI="http://launchpad.net/${PN}/${MY_PV}.x/${MY_PV}/+download/${P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc examples"
 
 DEPEND="
