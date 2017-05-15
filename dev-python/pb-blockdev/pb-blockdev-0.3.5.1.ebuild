@@ -1,20 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4,3_5} pypy2_0 )
 
 DESCRIPTION="Python modules for common used wrapper classes for different block devices."
 HOMEPAGE="https://github.com/fbrehm/py-pb-blockdev"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/fbrehm/py-pb-blockdev.git"
 
-inherit git-2 distutils user python versionator
+inherit git-2 distutils-r1 user versionator
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc nls"
-PYTHON_DEPEND="2::2.7"
 
 EGIT_BRANCH="develop"
 EGIT_COMMIT=$(replace_version_separator 3 '-')
@@ -41,21 +41,20 @@ pkg_setup() {
 	elog "Used GIT tag: '${EGIT_COMMIT}'."
 
 	elog "Start setup package ..."
-	python_set_active_version 2
-	python_pkg_setup
+	distutils-r1_src_prepare
 }
 
 src_compile() {
 	elog "Start compiling package ..."
-	distutils_src_compile
+	distutils-r1_src_compile
 	if use nls; then
 		make -C ${S}/po
 	fi
 }
 
 src_install() {
-	distutils_src_install
-	#python_clean_installation_image
+	einfo "Start installing package ..."
+	distutils-r1_src_install
 
 	if use doc; then
 		einfo "Installing documentation ..."
@@ -70,18 +69,10 @@ src_install() {
 
 	fi
 
-#	if use nls; then
-#		make -C ${S}/po DESTDIR="${ED}" install
-#	fi
+	if use nls; then
+		make -C ${S}/po DESTDIR="${ED}" install
+	fi
 
-}
-
-pkg_postinst() {
-	python_mod_optimize pb_blockdev
-}
-
-pkg_postrm () {
-    python_mod_cleanup pb_blockdev
 }
 
 
